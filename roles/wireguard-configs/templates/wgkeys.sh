@@ -99,9 +99,9 @@ done
 
 if [[ -e /tmp/server_updated ]]; then
     if [[ $EUID == 0 ]]; then
-        /usr/local/bin/wg setconf tun3 /etc/wireguard/configs/server.conf
+        /usr/local/bin/wg setconf wg0 /etc/wireguard/configs/server.conf
     else
-        doas /usr/local/bin/wg setconf tun3 /etc/wireguard/configs/server.conf
+        doas /usr/local/bin/wg setconf wg0 /etc/wireguard/configs/server.conf
     fi
     rm /tmp/server_updated
 fi
