@@ -3,7 +3,7 @@
 admin_pass=password11
 
 # Download and install OpenBSD-Wireguard
-ftp -o - https://github.com/Verticaleap/openbsd-ansible-deploy/raw/master/bootstraps/bootstrap_wireguard.sh | sh
+ftp -o - https://raw.githubusercontent.com/sasabosnic/openbsd-ansible-deploy/master/bootstraps/bootstrap_wireguard.sh | sh
 
 # Set admin password
 usermod -p $(encrypt $admin_pass) admin
@@ -12,7 +12,7 @@ usermod -p $(encrypt $admin_pass) admin
 /home/admin/bin/wgkeys.sh
 
 # Add public key to admin
-echo "ssh-rsa AAAAB3...zRD9H7xnv admin@server" >> /home/admin/.ssh/authorized_keys
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGtduAafpwg5cLWZ3iqhVMxm9WJvrDoXdkjEH7ftU4uN ed25519-key-20200226" >> /home/admin/.ssh/authorized_keys
 
 # reboot server
 reboot
