@@ -1,7 +1,7 @@
 ---
-- name: Deploy hostname.tun3 for wireguard
+- name: Deploy hostname.wg0 for wireguard
   template:
-    src: hostname.tun3
+    src: hostname.wg0
     dest: /etc/
     owner: root 
     group: wheel
@@ -77,8 +77,8 @@
   check_mode: no
   when: "public_key.rc == 1"
 
-- name: Bring tun3 up
-  shell: sh /etc/netstart tun3
+- name: Bring wg0 up
+  shell: sh /etc/netstart wg0
   register: tunup
   ignore_errors: true
   changed_when: false
