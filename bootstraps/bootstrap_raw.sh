@@ -1,8 +1,8 @@
 # Setup installurl
-echo "http://ftp.OpenBSD.org/pub/OpenBSD/" > /etc/installurl
+echo "ftp://athena.caslab.queensu.ca/pub/OpenBSD/" > /etc/installurl
 
 # Install git
-export PKG_PATH=http://ftp.OpenBSD.org/pub/OpenBSD/$(uname -r)/packages/$(uname -p) && pkg_add -I git ansible
+export PKG_PATH=ftp://athena.caslab.queensu.ca/pub/OpenBSD/$(uname -r)/packages/$(uname -p) && pkg_add -I git ansible
 
 # Make git folder
 mkdir /root/git
