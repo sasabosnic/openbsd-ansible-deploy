@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export DOMAIN=mydomain.com
+export DOMAIN=spamalot.xyz
 
 admin_pass=password11
 
