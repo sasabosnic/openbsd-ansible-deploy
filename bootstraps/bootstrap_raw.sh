@@ -1,5 +1,5 @@
 # Setup installurl
-echo "https://mirror.csclub.uwaterloo.ca/pub/OpenBSD/" > /etc/installurl
+echo "https://cdn.openbsd.org/pub/OpenBSD/" > /etc/installurl
 
 # Install git
 export PKG_PATH=https://cdn.openbsd.org/pub/OpenBSD/$(uname -r)/packages/$(uname -p) && pkg_add -I git ansible
