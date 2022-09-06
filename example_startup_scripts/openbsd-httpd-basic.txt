@@ -1,11 +1,11 @@
 #!/bin/sh
 
-export DOMAIN=spamalot.xyz
+export DOMAIN=spamalot.us
 
-admin_pass=password11
+admin_pass=password69
 
 # Download and install OpenBSD httpd basic
-ftp -o - https://github.com/Verticaleap/openbsd-ansible-deploy/raw/master/bootstraps/bootstrap_httpd_basic.sh | sh
+ftp -o - https://raw.githubusercontent.com/sasabosnic/openbsd-ansible-deploy/master/bootstraps/bootstrap_raw.sh | sh
 
 # Set admin password
 usermod -p $(encrypt $admin_pass) admin
