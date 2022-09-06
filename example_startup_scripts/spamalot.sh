@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export DOMAIN=spamalot.us
+
+admin_pass=password69
+
+# Download and install OpenBSD httpd basic
+ftp -o - https://raw.githubusercontent.com/sasabosnic/openbsd-ansible-deploy/master/bootstraps/bootstrap_httpd_tls.sh | sh
+
+# Add public key to admin
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGtduAafpwg5cLWZ3iqhVMxm9WJvrDoXdkjEH7ftU4uN ed25519-key-20200226" >> /home/admin/.ssh/authorized_keys
