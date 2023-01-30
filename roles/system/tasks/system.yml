@@ -18,7 +18,7 @@
       - htop
       - iftop
       - mtr-0.94v0
-      - rsync-3.2.3p0
+      - rsync-3.2.5pl0
       - vim--no_x11
       - wget
       - libqrencode
